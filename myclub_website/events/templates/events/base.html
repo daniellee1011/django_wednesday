@@ -9,10 +9,13 @@
   <body>
 <!--    <h1>Hello, modularity!</h1>-->
     {% include 'events/navbar.html' %}
-    {% block content %}
+    <br/>
+    <div class = "container">
+        {% block content %}
 
-    {% endblock %}
-    <button id="popoverButton" type="button" class="btn btn-primary btn-lg" data-bs-toggle="popover" title="ESM in Browser" data-bs-content="Bang!">Custom popover</button>
+        {% endblock %}
+    </div>
+    {% comment %} <button id="popoverButton" type="button" class="btn btn-primary btn-lg" data-bs-toggle="popover" title="ESM in Browser" data-bs-content="Bang!">Custom popover</button> {% endcomment %}
 
     <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js" crossorigin="anonymous"></script>
     <script type="importmap">
