@@ -29,6 +29,9 @@
       </p>
       <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
+    <div class="card-footer text-body-secondary">
+        <a href="{% url 'update-event' event.id %}">Update Event</a>
+      </div>
   </div>
 
     {% comment %} <strong> {{ event }} </strong>
