@@ -6,6 +6,17 @@ from .forms import VenueForm, EventForm
 
 # Create your views here.
 
+def delete_venue(request, venue_id):
+    print('delete_venue function called')
+    venue = Venue.objects.get(pk=venue_id)
+    venue.delete()
+    return redirect('list-venues')
+
+def delete_event(request, event_id):
+    print('delete_event function called')
+    event = Event.objects.get(pk=event_id)
+    event.delete()
+    return redirect('list-events')
 
 def add_event(request):
     print('add_event function called')
